@@ -9,7 +9,7 @@ export const dummyData: Todo[] = [
     {
         id: 2,
         title: "왕초보 홈페이지 만들기 채널 구독하기",
-        completed: false,
+        completed: true,
     },
     {
         id: 3,
