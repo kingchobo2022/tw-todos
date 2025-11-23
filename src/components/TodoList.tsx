@@ -18,15 +18,22 @@ export default function TodoList({todos, onCompletedChange, onDelete}: TodoListP
     });
 
     return (
-        <div className="space-y-2">
-          {todosSorted.map(todo => (
-            <TodoItem
-            key={todo.id} 
-            todo={todo} 
-            onCompletedChange={onCompletedChange}
-            onDelete={onDelete}
-             />
-          ))}
-        </div>        
+        <>
+            <div className="space-y-2">
+            {todosSorted.map(todo => (
+                <TodoItem
+                key={todo.id} 
+                todo={todo} 
+                onCompletedChange={onCompletedChange}
+                onDelete={onDelete}
+                />
+            ))}
+            </div> 
+            {todosSorted.length === 0 && (
+                <p className="text-center text-gray-400">
+                    아직 일정이 없습니다.
+                </p>                
+            )}       
+        </>
     )
 }
